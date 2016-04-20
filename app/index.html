@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="app" >
+<head>
+	<title>AngularJS: Filters</title>
+	<link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="vendor/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+</head>
+<body ng-controller="defaultController as vm">
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>
+					Products
+					<span class="label label-primary">{{vm.products.length}}</span>
+				</h3>
+			</div>
+		</div>
+		<div class="panel-body">
+			<table class="table table-striped table-bordered table-condensed">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Category</th>
+						<th>Expiry</th>
+						<th class="text-right">Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="p in vm.products">
+						<td>{{p.name}}</td>
+						<td>{{p.category}}</td>
+						<td>{{p.expiry}}</td>
+						<td class="text-right">{{p.price}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- linky example -->
+			<!-- <div ng-bind-html="vm.htmlSnippet"></div> -->
+			<!-- <div ng-bind-html="vm.htmlSnippet | linky"></div> -->
+		</div>
+	<div>
+
+	<script src="vendor/angular/angular.min.js"></script>
+	<script src="vendor/angular-sanitize/angular-sanitize.min.js"></script>
+	
+	<script src="app.js"></script>
+	<script src="feature/feature.module.js"></script>
+	<script src="feature/productDataSrv.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
