@@ -3,9 +3,9 @@
 
 	angular
 		.module("app", ["ngSanitize", "feature"])
-		.controller("defaultController", defaultController);
+		.controller("Default", Default);
 
-	function defaultController(productData) {
+	function Default(productData) {
 		var vm = this;
 		vm.products = productData.products;
 

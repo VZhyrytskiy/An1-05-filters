@@ -17,18 +17,6 @@ gulp.task('webserver', function() {
 	}));
 });
 
-gulp.task("hint", function() {
-	return gulp
-		.src(source)
-		.pipe(plug.jshint("./.jshintrc"))
-
-		// default reporter
-		// .pipe(plug.jshint.reporter("default"));
-		// stylish reporter
-		.pipe(plug.jshint.reporter("jshint-stylish"));
-});
-
-
 gulp.task('ngAnnotate', function () {
 	return gulp
 		.src(source)
@@ -47,16 +35,8 @@ gulp.task('ngAnnotate', function () {
 		.pipe(gulp.dest('./build'));
 });
 
-gulp.task("watch", function() {
-	return gulp
-		.watch(source, ["hint"])
-		.on("change", function(event) {
-			console.log("*** File " + event.path + " was " + event.type + ", running tasks...");
-		});
-});
-
 // The default task is 'webserver'
-gulp.task("default", ["webserver", "watch"]);
+gulp.task("default", ["webserver"]);
 
 /*  
 	if you don't use the default name if gulpfile.js,
