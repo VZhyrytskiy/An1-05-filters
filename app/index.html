@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
 <head>
 	<title>AngularJS: Filters</title>
 	<link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="vendor/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 </head>
-<body ng-controller="Default as vm">
+<body ng-controller="Default as $ctrl">
 	<div class="container">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3>
 					Products
-					<span class="label label-primary">{{vm.products.length}}</span>
+					<span class="label label-primary">{{$ctrl.products.length}}</span>
 				</h3>
 			</div>
 		</div>
@@ -26,7 +26,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="p in vm.products">
+					<tr ng-repeat="p in $ctrl.products">
 						<td>{{p.name}}</td>
 						<td>{{p.category}}</td>
 						<td>{{p.expiry}}</td>
@@ -36,8 +36,8 @@
 			</table>
 
 			<!-- linky example -->
-			<!-- <div ng-bind-html="vm.htmlSnippet"></div> -->
-			<!-- <div ng-bind-html="vm.htmlSnippet | linky"></div> -->
+			<!-- <div ng-bind-html="$ctrl.htmlSnippet"></div> -->
+			<!-- <div ng-bind-html="$ctrl.htmlSnippet | linky"></div> -->
 		</div>
 	<div>
 

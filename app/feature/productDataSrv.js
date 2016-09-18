@@ -19,7 +19,7 @@
 				{"name": "Whisky", "category": "Drinks", "price": 45.99, "expiry": 365}
 			]
 		};
-	};
+	}
 
 })();
 
